@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    :root {
+        --color-bkg: 30deg, 100%, 96%;
+        --color-content: 5.2deg, 31.1%, 21.6%;
+        --color-accent1: 29.7deg, 100%, 50%;
+        --color-accent2: 30.8deg, 32.1%, 53.1%;
+    }
+    body {
+        background-color: hsl(var(--color-bkg));
+        color: hsl(var(--color-content));
+        font-family: 'KoHo', sans-serif;
+    }
+    /*@media (prefers-color-scheme: dark) {
+        :root {
+            --color-content: 30deg, 100%, 96%;
+            --color-bkg: 5.2deg, 31.1%, 21.6%;
+            --color-accent1: 29.7deg, 100%, 50%;
+            --color-accent2: 30.8deg, 32.1%, 53.1%;
+        }
+    }*/
+}
