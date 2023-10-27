@@ -1,10 +1,11 @@
 <script setup>
 import Layout from "./components/Layout.vue";
+debugger
 </script>
 
 <template>
  <Layout>
-  <h1>Index page</h1>
+  <router-view/>
   </Layout>
 </template>
 
