@@ -42,10 +42,18 @@
     </div>
   </footer>
   <div class="bg-accent-1 text-bkg text-center py-3 px-5">
-    <p>&copy; FoodMood by <a href="https://arinasiedina.online/" class="underline text-bkg font-bold">AriS</a> -
-      {{ new Date().getFullYear() }}. <span>Inspiration drawn from <a
-          href="https://dribbble.com/shots/15223754-Food-Cooking-Inspiration-Website/attachments/6970440?mode=media"
-          class="underline text-bkg font-bold">Maulana Lufti's FoodMood</a> </span></p>
+    <p>&copy; FoodMood by
+      <a href="https://arinasiedina.online/"
+         class="underline text-bkg font-bold"
+         target="_blank">AriS
+      </a>-{{ new Date().getFullYear() }}.
+      <span>Inspiration drawn from
+            <a
+                href="https://dribbble.com/shots/15223754-Food-Cooking-Inspiration-Website/attachments/6970440?mode=media"
+                class="underline text-bkg font-bold" target="_blank">Maulana Lufti's FoodMood
+            </a>
+        </span>
+    </p>
   </div>
 </template>
 <style scoped>
@@ -53,3 +61,5 @@ a, router-link {
   @apply font-[400];
 }
 </style>
+<script setup>
+</script>
