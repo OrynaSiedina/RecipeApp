@@ -1,5 +1,5 @@
 <template>
-  <header>  <!--class="hidden lg:block"-->
+  <header class="hidden lg:block">
     <nav class="flex items-center justify-between py-5 px-10">
       <router-link to="/">
         <h1 class="text-3xl font-bold text-accent-2">

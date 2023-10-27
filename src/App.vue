@@ -1,6 +1,5 @@
 <script setup>
 import Layout from "./components/Layout.vue";
-debugger
 </script>
 
 <template>
