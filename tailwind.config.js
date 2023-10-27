@@ -2,11 +2,20 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        accent: {
+          1: "hsl(var(--color-accent1))",
+          2: "hsl(var(--color-accent2))",
+        },
+        bkg: "hsl(var(--color-bkg))",
+        content: "hsl(var(--color-content))"
+
+      },
+    },
   },
   plugins: [],
-}
-
+};
