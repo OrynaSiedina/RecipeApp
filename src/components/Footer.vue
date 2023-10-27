@@ -11,31 +11,11 @@
         Company
       </h4>
       <div class="flex flex-col gap-3">
-        <router-link
-            to="/"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Home</router-link
-        >
-        <router-link
-            to="/about"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >About</router-link
-        >
-        <router-link
-            to="/recipes"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Recipes</router-link
-        >
-        <router-link
-            to="/download"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Download</router-link
-        >
-        <router-link
-            to="/contact"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Contact</router-link
-        >
+        <router-link class="textHover" to="/">Home</router-link>
+        <router-link class="textHover" to="/about">About</router-link>
+        <router-link class="textHover" to="/recipes">Recipes</router-link>
+        <router-link class="textHover" to="/download">Download</router-link>
+        <router-link class="textHover" to="/contact">Contact</router-link>
       </div>
     </div>
     <div class="flex flex-col gap-4 md:col-span-2">
@@ -43,31 +23,11 @@
         Support
       </h4>
       <div class="flex flex-col gap-3">
-        <a
-            to="#"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Account</a
-        >
-        <a
-            to="#"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Support Center</a
-        >
-        <a
-            to="#"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Feedback</a
-        >
-        <a
-            to="#"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >Accessibility</a
-        >
-        <a
-            to="#"
-            class="font-[400] text-lg hover:text-green-700 transition duration-300 ease-in-out"
-        >FAQs</a
-        >
+        <a to="#" class="textHover">Account</a>
+        <a to="#" class="textHover">Support Center</a>
+        <a to="#" class="textHover">Feedback</a>
+        <a to="#" class="textHover">Accessibility</a>
+        <a to="#" class="textHover">FAQs</a>
       </div>
     </div>
 
@@ -80,8 +40,16 @@
         <p>We'd love to hear from you</p>
       </div>
     </div>
-  </footer >
-  <div class="bg-accent-1 text-content text-center py-3 px-5">
-    <p>&copy; Let'sCook by <a href="https://arinasiedina.online/" class="underline text-yellow-100 font-bold">AriS</a> - {{new Date().getFullYear()}}. <span>Inspiration drawn from <a href="https://dribbble.com/shots/15223754-Food-Cooking-Inspiration-Website/attachments/6970440?mode=media" class="underline text-yellow-100 font-bold">Maulana Lufti's FoodMood</a> </span></p>
+  </footer>
+  <div class="bg-accent-1 text-bkg text-center py-3 px-5">
+    <p>&copy; FoodMood by <a href="https://arinasiedina.online/" class="underline text-bkg font-bold">AriS</a> -
+      {{ new Date().getFullYear() }}. <span>Inspiration drawn from <a
+          href="https://dribbble.com/shots/15223754-Food-Cooking-Inspiration-Website/attachments/6970440?mode=media"
+          class="underline text-bkg font-bold">Maulana Lufti's FoodMood</a> </span></p>
   </div>
 </template>
+<style scoped>
+a, router-link {
+  @apply font-[400];
+}
+</style>

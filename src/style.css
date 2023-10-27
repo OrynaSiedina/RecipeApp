@@ -23,3 +23,8 @@
         }
     }*/
 }
+@layer components {
+    .textHover {
+        @apply hover:text-accent-1 transition duration-300 ease-in-out cursor-pointer;
+    }
+}
