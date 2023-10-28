@@ -23,11 +23,11 @@
         Support
       </h4>
       <div class="flex flex-col gap-3">
-        <a to="#" class="textHover">Account</a>
-        <a to="#" class="textHover">Support Center</a>
-        <a to="#" class="textHover">Feedback</a>
-        <a to="#" class="textHover">Accessibility</a>
-        <a to="#" class="textHover">FAQs</a>
+          <router-link class="textHover" to="#">Account</router-link>
+          <router-link class="textHover" to="#">Support Center</router-link>
+          <router-link class="textHover" to="#">Feedback</router-link>
+          <router-link class="textHover" to="#">Accessibility</router-link>
+          <router-link class="textHover" to="#">FAQs</router-link>
       </div>
     </div>
 
@@ -57,7 +57,7 @@
   </div>
 </template>
 <style scoped>
-a, router-link {
+router-link {
   @apply font-[400];
 }
 </style>
