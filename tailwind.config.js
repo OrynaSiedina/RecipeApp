@@ -14,8 +14,10 @@ export default {
         bkg: "hsl(var(--color-bkg))",
         content: "hsl(var(--color-content))"
 
-      },
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [
+        require('@tailwindcss/forms')
+    ],
 };
