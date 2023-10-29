@@ -18,9 +18,8 @@
       </div>
     </div>
     <div class=" border border-accent-2 p-4 bg-accent-2 text-bkg">
-      <div v-for="(tab, index) in tabs" :key="index">
-        <!-- Use the dynamic component based on the activeTab -->
-        <component :is="activeComponent"></component>
+      <div class=" border border-accent-2 p-4 bg-accent-2 text-bkg">
+        <component :is="tabs[activeTab].component"></component>
       </div>
     </div>
   </div>
@@ -30,16 +29,13 @@
 import {ref} from 'vue';
 import MealsByName from '../components/MealsByName.vue';
 import {computed} from "@vue/reactivity";
+import MealsByLetter from "../components/MealsByLetter.vue";
+import MealsByOrigin from "../components/MealsByOrigin.vue";
 
 const activeTab = ref(0);
 const tabs = [
-  {label: "NAME", component: "MealsByName"},
-  {label: "LETTER", component: "MealsByName"},
-  {label: "ORIGIN", component: "MealsByName"},
+  {label: "NAME", component: MealsByName},
+  {label: "LETTER", component: MealsByLetter},
+  {label: "ORIGIN", component: MealsByOrigin},
 ];
-
-const activeComponent = computed(() => {
-  const componentName = tabs[activeTab.value].component;
-  return MealsByName;
-});
 </script>
