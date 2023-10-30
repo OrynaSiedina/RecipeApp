@@ -1,7 +1,4 @@
 <template>
-  <div class="p-8 pb-0">
-    <h1 class="text-4xl font-bold mb-4 text-orange-500">Ingredients</h1>
-  </div>
   <div class="px-8">
     <input
       type="text"
@@ -14,7 +11,7 @@
          @click.prevent="openIngredient(ingredient)"
          v-for="ingredient of computedIngredients"
          :key="ingredient.idIngredient"
-         class="block bg-white rounded p-3 mb-3 shadow"
+         class="block bg-bkg rounded p-3 mb-3 border-[1px] border-content shadow-md hover:shadow-xl transition duration-300 ease-in-out"
       >
         <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
       </a>
