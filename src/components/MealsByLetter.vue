@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-center text-3xl gap-3 px-8 mb-6">
+  <div class="text-bkg flex flex-wrap justify-center text-3xl gap-3 px-8 mb-6">
     <router-link
       :to="{ name: 'byLetter', params: { letter } }"
       v-for="letter of letters"
