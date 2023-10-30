@@ -21,6 +21,7 @@ const routes = [
     path: '/recipes',
     name: 'recipes',
     component: Recipes,
+    redirect: {name: 'byName'},
     children: [
       {
         path: 'by-letter/:letter?',

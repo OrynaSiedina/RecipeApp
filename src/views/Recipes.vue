@@ -1,41 +1,28 @@
 <template>
-  <div class="flex justify-center">
-    <h1 class="text-4xl text-accent-1 font-bold mb-4">SEARCH RECIPE BY:</h1>
+  <div class="flex justify-center md:my-6">
+    <h1 class="text-2xl text-content font-bold mb-4 md:text-4xl">SEARCH RECIPES BY:</h1>
   </div>
-
   <div>
-    <div class="flex">
-      <div
-        v-for="(tab, index) in tabs"
-        :key="index"
-        @click="activeTab = index"
-        :class="[
-        'cursor-pointer p-2 border-t border-l border-r border-accent-2 rounded-t text-accent-1 font-bold',
-        activeTab === index ? 'bg-accent-2 text-bkg' : '',
-      ]"
-      >
-        {{ tab.label }}
-      </div>
+    <div class="flex flex-col md:flex-row">
+      <router-link :to="{ name: 'byName'}" class="link">NAME</router-link>
+      <router-link :to="{ name: 'byLetter' }" class="link">LETTER</router-link>
+      <router-link :to="{ name: 'ingredients' }" class="link">INGREDIENT</router-link>
     </div>
-    <div class=" border border-accent-2 p-4 bg-accent-2 text-bkg">
-      <div class=" border border-accent-2 p-4 bg-accent-2 text-bkg">
-        <component :is="tabs[activeTab].component"></component>
-      </div>
+
+    <div class="py-2 md:pt-8 bg-accent-2 ">
+      <router-view></router-view>
     </div>
   </div>
 
 </template>
-<script setup>
-import {ref} from 'vue';
-import MealsByName from '../components/MealsByName.vue';
-import {computed} from "@vue/reactivity";
-import MealsByLetter from "../components/MealsByLetter.vue";
-import MealsByOrigin from "../components/MealsByOrigin.vue";
+<style scoped>
+.router-link-active {
+  @apply font-bold bg-accent-2;
+}
 
-const activeTab = ref(0);
-const tabs = [
-  {label: "NAME", component: MealsByName},
-  {label: "LETTER", component: MealsByLetter},
-  {label: "ORIGIN", component: MealsByOrigin},
-];
-</script>
+.link {
+  @apply md:w-1/3 text-center md:text-2xl text-content px-8 py-2 border-r-accent-2 border-r-[1px] border-t-accent-2 border-t-[1px]
+}
+
+</style>
+

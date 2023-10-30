@@ -9,7 +9,7 @@
       <div class="flex gap-8 navItems">
         <router-link :to="{ name: 'home' }" class="navItem textHover">Home</router-link>
         <router-link :to="{ name: 'about' }" class="navItem textHover">About</router-link>
-        <router-link :to="{ name: 'byName' }" class="navItem textHover" :class="recipesLinkClass">
+        <router-link :to="{ name: 'recipes' }" class="navItem textHover" :class="recipesLinkClass">
           Recipes
         </router-link>
         <router-link :to="{ name: 'download' }" class="navItem textHover">Download</router-link>

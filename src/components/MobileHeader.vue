@@ -20,12 +20,12 @@
         />
       </button>
 
-      <div :class="mobileMenu ? '' : 'translate-x-[-100vw]'" class="flex flex-col gap-8 absolute bg-white top-[75px] w-full z-10 left-0 px-10 border-t py-10 h-full transition duration-300 ease-in-out">
-        <router-link @click="toggleData" to="/" class="navItem textHover">Home</router-link>
-        <router-link @click="toggleData" to="/about" class="navItem textHover">About</router-link>
-        <router-link @click="toggleData" to="/recipes" class="navItem textHover">Recipes</router-link>
-        <router-link @click="toggleData" to="/download" class="navItem textHover">Download</router-link>
-        <router-link @click="toggleData" to="/contact" class="navItem textHover">Contact</router-link>
+      <div :class="mobileMenu ? 'right-0' : 'right-[100vw]'" class="flex flex-col gap-8 absolute bg-white top-[75px] w-auto z-10 px-10 border-t py-10 h-full transition duration-300 ease-in-out">
+        <router-link @click="toggleData" :to="{ name: 'home' }" class="navItem">Home</router-link>
+        <router-link @click="toggleData" :to="{ name: 'about' }" class="navItem">About</router-link>
+        <router-link @click="toggleData" :to="{ name: 'recipes' }" class="navItem">Recipes</router-link>
+        <router-link @click="toggleData" :to="{ name: 'download' }" class="navItem">Download</router-link>
+        <router-link @click="toggleData" :to="{ name: 'contact' }" class="navItem">Contact</router-link>
       </div>
     </nav>
   </header>
@@ -42,9 +42,9 @@ const toggleData = () => {
 };
 </script>
 
-
 <style scoped>
-.navItem{
+.navItem {
   @apply font-[400] text-lg;
 }
 </style>
+
