@@ -20,9 +20,9 @@
 </template>
 
 <script setup>
-import { computed } from "@vue/reactivity";
-import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
+import {computed} from "@vue/reactivity";
+import {onMounted, ref} from "vue";
+import {useRouter} from "vue-router";
 import axiosClient from "../axiosClient";
 import store from "../store";
 
@@ -40,12 +40,12 @@ function openIngredient(ingredient) {
   store.commit('setIngredient', ingredient)
   router.push({
     name: "byIngredient",
-    params: { ingredient: ingredient.strIngredient },
+    params: {ingredient: ingredient.strIngredient},
   });
 }
 
 onMounted(() => {
-  axiosClient.get("list.php?i=list").then(({ data }) => {
+  axiosClient.get("list.php?i=list").then(({data}) => {
     ingredients.value = data.meals;
   });
 });

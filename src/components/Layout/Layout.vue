@@ -6,11 +6,11 @@ import MobileHeader from "./MobileHeader.vue";
 
 <template>
   <div>
-    <Header />
-    <MobileHeader />
+    <Header/>
+    <MobileHeader/>
     <div class="min-h-[calc(100vh-300px)]">
       <slot></slot>
     </div>
-    <Footer />
+    <Footer/>
   </div>
 </template>

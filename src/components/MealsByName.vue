@@ -8,13 +8,13 @@
       @change="searchMeals"
     />
   </div>
-  <Meals :meals="meals" />
+  <Meals :meals="meals"/>
 </template>
 
 <script setup>
-import { computed } from "@vue/reactivity";
-import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
+import {computed} from "@vue/reactivity";
+import {onMounted, ref} from "vue";
+import {useRoute} from "vue-router";
 import store from "../store";
 import Meals from '../components/Meals.vue'
 
@@ -36,4 +36,5 @@ onMounted(() => {
     searchMeals()
   }
 })
+
 </script>

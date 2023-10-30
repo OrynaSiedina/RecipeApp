@@ -34,7 +34,7 @@
         </ul>
       </div>
     </div>
-    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 " >
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 ">
       <Button :href="meal.strYoutube" text="Watch on YouTube"/>
       <Button :href="meal.strSource" text="View Original Source"/>
     </div>
@@ -64,7 +64,7 @@ onMounted(() => {
         let measure = meal.value[`strMeasure${i}`];
         if (ingredient) {
           mealIngredients.value.push(ingredient);
-          if(measure===" ") measure = 'to taste';
+          if (measure === " ") measure = 'to taste';
           mealMeasures.value.push(measure);
         }
       }

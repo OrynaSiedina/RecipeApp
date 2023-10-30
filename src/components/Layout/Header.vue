@@ -13,7 +13,6 @@
           Recipes
         </router-link>
         <router-link :to="{ name: 'download' }" class="navItem textHover">Download</router-link>
-        <router-link :to="{ name: 'contact' }" class="navItem textHover">Contact</router-link>
       </div>
     </nav>
   </header>

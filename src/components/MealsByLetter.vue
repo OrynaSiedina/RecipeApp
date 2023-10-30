@@ -9,14 +9,13 @@
       {{ letter }}
     </router-link>
   </div>
-
-  <Meals :meals="meals" />
+  <Meals :meals="meals"/>
 </template>
 
 <script setup>
-import { computed } from "@vue/reactivity";
-import { onMounted, watch } from "vue";
-import { useRoute } from "vue-router";
+import {computed} from "@vue/reactivity";
+import {onMounted, watch} from "vue";
+import {useRoute} from "vue-router";
 import store from "../store";
 import Meals from "../components/Meals.vue";
 
@@ -34,6 +33,6 @@ onMounted(() => {
 </script>
 <style scoped>
 .router-link-exact-active {
-@apply text-accent-1 font-bold;
+  @apply text-accent-1 font-bold;
 }
 </style>

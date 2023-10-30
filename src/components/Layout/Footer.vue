@@ -17,7 +17,6 @@
           Recipes
         </router-link>
         <router-link :to="{ name: 'download' }" class="navItem textHover">Download</router-link>
-        <router-link :to="{ name: 'contact' }" class="navItem textHover">Contact</router-link>
       </div>
     </div>
     <div class="flex flex-col gap-4 md:col-span-2">
@@ -25,11 +24,11 @@
         Support
       </h4>
       <div class="flex flex-col gap-3">
-          <router-link class="textHover" to="#">Account</router-link>
-          <router-link class="textHover" to="#">Support Center</router-link>
-          <router-link class="textHover" to="#">Feedback</router-link>
-          <router-link class="textHover" to="#">Accessibility</router-link>
-          <router-link class="textHover" to="#">FAQs</router-link>
+        <router-link class="textHover" to="#">Account</router-link>
+        <router-link class="textHover" to="#">Support Center</router-link>
+        <router-link class="textHover" to="#">Feedback</router-link>
+        <router-link class="textHover" to="#">Accessibility</router-link>
+        <router-link class="textHover" to="#">FAQs</router-link>
       </div>
     </div>
 
@@ -51,8 +50,8 @@
       </a>-{{ new Date().getFullYear() }}.
       <span>Inspiration drawn from
             <a
-                href="https://dribbble.com/shots/15223754-Food-Cooking-Inspiration-Website/attachments/6970440?mode=media"
-                class="underline text-bkg font-bold" target="_blank">Maulana Lufti's FoodMood
+              href="https://dribbble.com/shots/15223754-Food-Cooking-Inspiration-Website/attachments/6970440?mode=media"
+              class="underline text-bkg font-bold" target="_blank">Maulana Lufti's FoodMood
             </a>
         </span>
     </p>

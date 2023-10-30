@@ -20,20 +20,20 @@
         />
       </button>
 
-      <div :class="mobileMenu ? 'right-0' : 'right-[100vw]'" class="flex flex-col gap-8 absolute bg-white top-[75px] w-auto z-10 px-10 border-t py-10 h-full transition duration-300 ease-in-out">
+      <div :class="mobileMenu ? 'right-0' : 'right-[100vw]'"
+           class="flex flex-col gap-8 absolute bg-white top-[75px] w-auto z-10 px-10 border-t py-10 h-full transition duration-300 ease-in-out">
         <router-link @click="toggleData" :to="{ name: 'home' }" class="navItem">Home</router-link>
         <router-link @click="toggleData" :to="{ name: 'about' }" class="navItem">About</router-link>
         <router-link @click="toggleData" :to="{ name: 'recipes' }" class="navItem">Recipes</router-link>
         <router-link @click="toggleData" :to="{ name: 'download' }" class="navItem">Download</router-link>
-        <router-link @click="toggleData" :to="{ name: 'contact' }" class="navItem">Contact</router-link>
       </div>
     </nav>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import {ref} from 'vue';
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 
 const mobileMenu = ref(false);
 
