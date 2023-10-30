@@ -11,11 +11,13 @@
         Company
       </h4>
       <div class="flex flex-col gap-3">
-        <router-link class="textHover" to="/">Home</router-link>
-        <router-link class="textHover" to="/about">About</router-link>
-        <router-link class="textHover" to="/recipes">Recipes</router-link>
-        <router-link class="textHover" to="/download">Download</router-link>
-        <router-link class="textHover" to="/contact">Contact</router-link>
+        <router-link :to="{ name: 'home' }" class="navItem textHover">Home</router-link>
+        <router-link :to="{ name: 'about' }" class="navItem textHover">About</router-link>
+        <router-link :to="{ name: 'byName' }" class="navItem textHover" :class="recipesLinkClass">
+          Recipes
+        </router-link>
+        <router-link :to="{ name: 'download' }" class="navItem textHover">Download</router-link>
+        <router-link :to="{ name: 'contact' }" class="navItem textHover">Contact</router-link>
       </div>
     </div>
     <div class="flex flex-col gap-4 md:col-span-2">
