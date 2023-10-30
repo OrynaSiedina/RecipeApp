@@ -1,7 +1,8 @@
 <template>
   <div class="max-w-[800px] mx-auto p-8">
-    <img :src="meal.strMealThumb" :alt="meal.strMeal" class="max-w-[100%]">
+    <button @click="goBack" class="sticky top-0 bg-accent-2 text-bkg ">← Go Back</button>
     <h1 class="text-4xl font-bold mb-5 text-accent-1">{{ meal.strMeal }}</h1>
+    <img :src="meal.strMealThumb" :alt="meal.strMeal" class="max-w-[100%]">
     <div class="grid grid-cols-1 sm:grid-cols-3 text-lg py-2">
       <div>
         <strong class="font-bold">Category:</strong> {{ meal.strCategory }}
@@ -11,7 +12,7 @@
       </div>
     </div>
 
-    <div class="my-3">
+    <div class="my-3 text-justify">
       {{ meal.strInstructions }}
     </div>
 
@@ -45,6 +46,7 @@ import {onMounted, ref} from 'vue'
 import {useRoute} from 'vue-router';
 import axiosClient from '../axiosClient.js';
 import Button from '../components/Button.vue';
+import router from "../router/index.js";
 
 const route = useRoute();
 const meal = ref({});
@@ -59,12 +61,17 @@ onMounted(() => {
       for (let i = 1; i <= 20; i++) {
         const component = meal.value[`strIngredient${i}`];
         const ingredient = component.charAt(0).toUpperCase() + component.slice(1).toLowerCase();
-        const measure = meal.value[`strMeasure${i}`];
-        if (ingredient && measure) {
+        let measure = meal.value[`strMeasure${i}`];
+        if (ingredient) {
           mealIngredients.value.push(ingredient);
+          if(measure===" ") measure = 'to taste';
           mealMeasures.value.push(measure);
         }
       }
     })
+  window.scrollTo(0, 0);
 })
+const goBack = () => {
+  router.go(-1);
+}
 </script>
