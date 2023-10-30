@@ -9,18 +9,39 @@
       <div class="flex gap-8 navItems">
         <router-link :to="{ name: 'home' }" class="navItem textHover">Home</router-link>
         <router-link :to="{ name: 'about' }" class="navItem textHover">About</router-link>
-        <router-link :to="{ name: 'recipes' }" class="navItem textHover">Recipes</router-link>
+        <router-link :to="{ name: 'byName' }" class="navItem textHover" :class="recipesLinkClass">
+          Recipes
+        </router-link>
         <router-link :to="{ name: 'download' }" class="navItem textHover">Download</router-link>
         <router-link :to="{ name: 'contact' }" class="navItem textHover">Contact</router-link>
       </div>
     </nav>
   </header>
 </template>
+
 <style scoped>
 .navItem {
   @apply font-normal text-lg;
 }
+
 .router-link-exact-active {
-  @apply text-accent-1 font-bold;
+  @apply text-accent-1;
 }
 </style>
+
+<script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const isRecipesRoute = computed(() => {
+  return route.matched.some(record => record.name === 'recipes');
+});
+
+const recipesLinkClass = computed(() => {
+  return {
+    'text-accent-1': isRecipesRoute.value,
+  };
+});
+</script>
