@@ -18,7 +18,11 @@
 <style scoped>
 .router-link-active {
   @apply font-bold bg-accent-2;
-  order: 3;
+}
+@media (max-width: 768px) {
+  .router-link-active {
+    order: 3;
+  }
 }
 
 .link {
