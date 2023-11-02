@@ -18,6 +18,7 @@
 <style scoped>
 .router-link-active {
   @apply font-bold bg-accent-2;
+  order: 3;
 }
 
 .link {
