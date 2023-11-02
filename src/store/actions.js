@@ -19,4 +19,9 @@ export function searchMealsByIngredient({ commit }, ing) {
     })
 }
 
-
+export function getRandomMeal({ commit }) {
+  axiosClient.get(`random.php`)
+    .then(({ data }) => {
+      commit('setRecipeOfTheDay', data.meals)
+    })
+}

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "table": "url('./src/assets/home_hero_bkg.jpg')",
+      },
       colors: {
         accent: {
           1: "hsl(var(--color-accent1))",
