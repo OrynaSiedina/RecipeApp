@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="flex justify-center md:my-6">
     <h1 class="text-2xl text-content font-bold mb-4 md:text-4xl">SEARCH RECIPES BY:</h1>
   </div>
@@ -13,7 +14,7 @@
       <router-view></router-view>
     </div>
   </div>
-
+  </div>
 </template>
 <style scoped>
 .router-link-active {
@@ -31,3 +32,5 @@
 
 </style>
 
+<script setup>
+</script>
